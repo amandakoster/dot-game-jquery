@@ -12,14 +12,41 @@
 }
 
 #animated {
-	width: 100px;
-	height: 100px;
-  border-radius: 50%;
-	background: silver;
-	margin: 1em 0;
-	animation: grow 1s infinite;
-}
+	  height: 40px;
+	  width: 40px;
+	  background-color: red;
+	  animation:
+	    nudge 3s linear infinite;
+	  border-radius: 100%;
+	}
+
+	@keyframes nudge {
+	  0%, 100% {
+	    transform: translate(0, 0);
+	  }
+
+	  100% {
+	    transform: translate(400px, 0);
+	  }
+	}
 
 #animated.off {
 	animation-name: none;
+}
+
+/*.circle {
+  border-radius: 50%;
+  float: left;
+  border: none;
+}*/
+
+ol {
+	text-decoration: none;
+}
+
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  border: solid yellow;
 }

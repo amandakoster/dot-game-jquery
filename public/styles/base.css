@@ -1,0 +1,25 @@
+
+@keyframes grow {
+	0% {
+		width: 100px;
+		height: 100px;
+	}
+
+	100% {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+#animated {
+	width: 100px;
+	height: 100px;
+  border-radius: 50%;
+	background: silver;
+	margin: 1em 0;
+	animation: grow 1s infinite;
+}
+
+#animated.off {
+	animation-name: none;
+}

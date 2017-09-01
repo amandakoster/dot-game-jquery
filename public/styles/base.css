@@ -12,24 +12,33 @@
 }
 
 #animated {
-	width: 100px;
-	height: 100px;
-  border-radius: 50%;
-	background: silver;
-	margin: 1em 0;
-	animation: grow 1s infinite;
-	float: left;
-}
+	  height: 40px;
+	  width: 40px;
+	  background-color: red;
+	  animation:
+	    nudge 3s linear infinite;
+	  border-radius: 100%;
+	}
+
+	@keyframes nudge {
+	  0%, 100% {
+	    transform: translate(0, 0);
+	  }
+
+	  100% {
+	    transform: translate(400px, 0);
+	  }
+	}
 
 #animated.off {
 	animation-name: none;
 }
 
-.circle {
+/*.circle {
   border-radius: 50%;
   float: left;
   border: none;
-}
+}*/
 
 ol {
 	text-decoration: none;
@@ -40,37 +49,4 @@ ol {
   height: 400px;
   position: relative;
   border: solid yellow;
-}
-
-#animate {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: red;
-	animation-iteration-count: 2;
-
-	@keyframes {
-	    0%   { top:0px;}
-	    100%  {top:200px;}
-	    }
-		}
-
-.box {
-  background-color: #218D9B;
-  height: 100px;
-  width: 100px;
-}
-
-.transform {
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  transition: all 2s ease;
-}
-
-.transform-active {
-  background-color: #45CEE0;
-  height: 200px;
-  width: 200px;
 }

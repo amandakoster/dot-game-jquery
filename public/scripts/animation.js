@@ -29,9 +29,21 @@ function myMove() {
   }
 }
 
-// $(document).ready(function(){
-//   $('#button').click(function() {
-//     $('#animate').dotMove();
-//     $('.transform').toggleClass('transform-active');
-//   });
-// });
+$(document).ready(function(){
+  $('#button').click(function() {
+    $('#animate').dotMove();
+    $('.transform').toggleClass('transform-active');
+  });
+});
+
+(function( $ ) {
+  $(function() {
+    $( '#stop' ).click(function() {
+      $( '#animated' ).addClass( 'off' );
+    });
+    $( '#start' ).click(function() {
+      $( '#animated' ).removeClass( 'off' );
+    });
+  });
+
+})( jQuery );

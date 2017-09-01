@@ -3,19 +3,18 @@
 <head>
 <link rel="stylesheet" href="styles/base.css">
 </head>
-
 <body>
-  <!-- <canvas id="canvas" width="400" height="400"></canvas>
-  <input id="refresh" type="button" value="refresh"> -->
+
+  <div id="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <p>Value: <span id="demo"></span></p>
+  </div>
 
 
-  <div id ="container">
-  <div id ="animate"></div>
+  <div id ="container"></div><div id ="animate"></div>
 
   <button class="btn2">Make BTN</button>
-  <ul>
-    <li></li>
-  </ul>
+  <ul><li></li></ul>
 
   <div id="content"></div>
   <button id="getNumber">Generate a random number between  10-100 ish. </button>
@@ -27,10 +26,10 @@
   </p>
   <div id="animated"></div>
 
-  </div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="scripts/animation.js"></script>
 <script src="scripts/dot-size.js"></script>
+<script src="scripts/slider.js"></script>
 </html>

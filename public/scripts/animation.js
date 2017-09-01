@@ -10,10 +10,6 @@ $(document).ready(function(){
   });
 });
 
-// let createDot = function(){
-//   let dotSize = Math.ceil((Math.random() * (max - min) + min})
-//
-// }
 function myMove() {
   var elem = document.getElementById('animate');
   var pos = 0;

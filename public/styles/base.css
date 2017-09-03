@@ -1,25 +1,10 @@
 
-#dot-animation {
-	  height: 40px;
-	  width: 40px;
-	  background-color: red;
-	  animation:
-	    nudge 3s linear infinite;
-	  border-radius: 100%;
-	}
-
-	@keyframes nudge {
-	  0%, 100% {
-	    transform: translate(0, 0);
-	  }
-
-	  100% {
-	    transform: translate(400px, 0);
-	  }
-	}
-
-#dot-animation.off {
-	animation-name: none;
+#dot {
+  border: 3px solid red;
+  position: absolute
+  top: 0;
+  left: 0;
+  width: 50px;
 }
 
 ul {

@@ -1,31 +1,32 @@
-'use strict';
+console.log($);
 
-$('button').click(function(){
-  function animate() {
-    $('.square').animate({ left: '500px'}, 2000, 'swing', function(){
-      $(' .square').animate({
-        left: '0px'
-      }, 2000, 'swing', animate);
-    });
-  };
-  animate();
-});
+var $dot = $('#dot');
+var windowBottom = $(window).height();
+console.log(windowBottom);
+var lastFrameTime = null;
+function animationLoop(timestamp) {
+  if (lastFrameTime == null) {
+    lastFrameTime = timestamp;
+    window.requestAnimationFrame(animationLoop);
+    return;
+  }
 
-$('.stop').click(function(){
-  $('.square').stop(true);
-});
+  var frameTime = timestamp - lastFrameTime;
+  lastFrameTime = timestamp;
 
-// function myMove() {
-//   var elem = document.getElementById('dot-animation');
-//   var pos = 0;
-//   var id = setInterval(frame, 5);
-//   function frame() {
-//     if (pos == 350) {
-//       clearInterval(id);
-//     } else {
-//       pos++;
-//       elem.style.top = pos + 'px';
-//       elem.style.left = pos + 'px';
-//     }
-//   }
-// }
+  var velocity = 100 / 1000;
+  var offset = $dot.offset();
+  offset.top += velocity * frameTime;
+
+  // spawn
+  if (offset.top > windowBottom) {
+    offset.top = 0;
+    offset.left += 50;
+  }
+
+  $dot.offset(offset);
+
+  window.requestAnimationFrame(animationLoop);
+}
+
+window.requestAnimationFrame(animationLoop);

@@ -1,5 +1,5 @@
 
-#animated {
+#dot-animation {
 	  height: 40px;
 	  width: 40px;
 	  background-color: red;
@@ -18,24 +18,18 @@
 	  }
 	}
 
-#animated.off {
+#dot-animation.off {
 	animation-name: none;
 }
 
-
-ol {
+ul {
 	text-decoration: none;
-}
-
-
-#slidecontainer {
-    width: 100%;
 }
 
 .slider {
     -webkit-appearance: none;
-    width: 100%;
-    height: 15px;
+    width: 50%;
+    height: 10px;
     border-radius: 5px;
     background: #d3d3d3;
     outline: none;
@@ -47,3 +41,69 @@ ol {
 .slider:hover {
     opacity: 1;
 }
+
+button.stop_button {
+    width: 5em;
+    height: 3em;
+		margin: 1em;
+    border: solid red;
+		background: white;
+		color: red;
+}
+
+.start_button {
+    width: 5em;
+    height: 3em;
+		margin: 1em;
+		border: solid green;
+    background: white;
+    color: green;
+}
+
+
+#example-five {
+  position: relative;
+}
+#example-five-checkbox {
+  display: none;
+}
+#example-five-checkbox:checked + #example-five:after {
+  content: "Hide";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+
+#jq-animate {
+	background:#98bf21;
+	height:50px;
+	width:50px;
+	position:absolute;
+	z-index:500;
+	right:0px;
+	top:10px;
+}
+
+#box1, #box2, #box3 {
+	width: 50px;
+	height: 100px;
+	position: relative;
+	border-radius: 50%;
+}
+#box1 {
+	background: #0C0;
+}
+/*#box2 {
+	background: #090;
+}
+#box3 {
+	background: #060;
+}*/

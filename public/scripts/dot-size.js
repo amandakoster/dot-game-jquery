@@ -1,7 +1,51 @@
 'use strict';
 
-var link = document.getElementById('getNumber');
+//get random number - needs to generate random sized dots
+var link = document.getElementById('get-number');
 link.onclick = getNumber;
+
+function getNumber() {
+  var min = 10;
+  var max = 100;
+  var randomNumber = Math.random() * (max + 1) + min;
+  $('#result').html(randomNumber);
+  return false;
+}
+
+function creatDot(width, height, color, x, y, type) {
+  this.type = type;
+  this.width = width;
+  this.height = height;
+  this.x = x;
+  this.y = y;
+  this.speedX = 0;
+  this.speedY = 0;
+  this.gravity = 0.05;
+  this.gravitySpeed = 0;
+  this.update = function() {
+    ctx = myGameArea.context;
+    ctx.fillStyle = color;
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  };
+  this.newPos = function() {
+    this.gravitySpeed += this.gravity;
+    this.x += this.speedX;
+    this.y += this.speedY + this.gravitySpeed;
+  };
+}
+
+function updateGameArea() {
+  myGameArea.clear();
+  myGamePiece.newPos();
+  myGamePiece.update();
+}
+//makes more buttons
+$(document).ready(function(){
+  $('.btn2').click(function(){
+    $('ul').append('<button>new button</button>');
+  });
+});
+
 //
 // function getRandomArbitrary(min, max){
 //   return Math.random() * (max - min) + min;}
@@ -19,20 +63,6 @@ link.onclick = getNumber;
 //   let randomize = getRandomArbitrary(10, 100)});
 //     console.log('dot', 1/this.state.randomize);
 // }
-
-function getNumber() {
-  var min = 10;
-  var max = 100;
-  var randomNumber = Math.random() * (max + 1) + min;
-  $('#result').html(randomNumber);
-  return false;
-}
-
-$(document).ready(function(){
-  $('.btn2').click(function(){
-    $('ul').append('<button>new button</button>');
-  });
-});
 
 // var canvas = document.getElementById('canvas');
 // var ctx = canvas.getContext('2d');

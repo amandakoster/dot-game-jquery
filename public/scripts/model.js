@@ -1,15 +1,31 @@
 'use strict';
 
+var $dot = $('#dot');
+
 var gameModel = {
   velocity : 10,
   pause : false,
 };
 
+// var randomize = function randomize() {
+//   function getRandomArbitrary(min, max){
+//     console.log(randomize);
+// };
+
+// $dot.randomize()
+
+// $('#dot').increment();
+
+var offset = $dot.offset();
+$('#dot').click(function() {
+  console.log('click');
+  $(this).offset({ top: 10, left: 50 });
+});
+
 $(function() {
   $('#pause').click(function() {
     gameModel.pause = !gameModel.pause;
     $(this).text(gameModel.pause ? 'Start' : 'Pause');
-    console.log(('clicked', gameModel.pause));
   });
 });
 
@@ -22,7 +38,6 @@ slider.oninput = function() {
   gameModel.velocity = this.value;
 };
 
-var $dot = $('#dot');
 var windowBottom = $(window).height();
 console.log(windowBottom);
 var lastFrameTime = null;

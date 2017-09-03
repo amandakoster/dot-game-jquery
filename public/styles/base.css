@@ -92,7 +92,14 @@ canvas {
 	top:10px;
 }
 
-#box1, #box2, #box3 {
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+}
+
+/*#box1, #box2, #box3 {
 	width: 50px;
 	height: 100px;
 	position: relative;
@@ -100,7 +107,7 @@ canvas {
 }
 #box1 {
 	background: #0C0;
-}
+}*/
 /*#box2 {
 	background: #090;
 }

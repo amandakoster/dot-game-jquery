@@ -1,25 +1,10 @@
 
-#dot-animation {
-	  height: 40px;
-	  width: 40px;
-	  background-color: red;
-	  animation:
-	    nudge 3s linear infinite;
-	  border-radius: 100%;
-	}
-
-	@keyframes nudge {
-	  0%, 100% {
-	    transform: translate(0, 0);
-	  }
-
-	  100% {
-	    transform: translate(400px, 0);
-	  }
-	}
-
-#dot-animation.off {
-	animation-name: none;
+#dot {
+  border: 3px solid red;
+  position: absolute
+  top: 0;
+  left: 0;
+  width: 50px;
 }
 
 ul {
@@ -92,7 +77,14 @@ canvas {
 	top:10px;
 }
 
-#box1, #box2, #box3 {
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+}
+
+/*#box1, #box2, #box3 {
 	width: 50px;
 	height: 100px;
 	position: relative;
@@ -100,7 +92,7 @@ canvas {
 }
 #box1 {
 	background: #0C0;
-}
+}*/
 /*#box2 {
 	background: #090;
 }

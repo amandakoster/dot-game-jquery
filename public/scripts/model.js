@@ -6,7 +6,7 @@ var gameModel = {
 };
 
 $(function() {
-  $( '#pause' ).click(function() {
+  $('#pause').click(function() {
     gameModel.pause = !gameModel.pause;
     $(this).text(gameModel.pause ? 'Start' : 'Pause');
     console.log(('clicked', gameModel.pause));

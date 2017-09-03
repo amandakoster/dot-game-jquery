@@ -7,13 +7,6 @@
   width: 50px;
 }
 
-.button {
-  width: 10px;
-  height: 10px;
-  background: orange;
-
-}
-
 button {
   top: 20px;
   left: 20px;
@@ -22,7 +15,6 @@ button {
 #stop {
   left: 100px;
 }
-
 
 .slider {
     -webkit-appearance: none;
@@ -57,38 +49,3 @@ button.stop_button {
     background: white;
     color: green;
 }
-
-
-#example-five {
-  position: relative;
-}
-#example-five-checkbox {
-  display: none;
-}
-#example-five-checkbox:checked + #example-five:after {
-  content: "Hide";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-}
-
-
-
-/*#box1, #box2, #box3 {
-	width: 50px;
-	height: 100px;
-	position: relative;
-	border-radius: 50%;
-}
-#box1 {
-	background: #0C0;
-}*/
-/*#box2 {
-	background: #090;
-}
-#box3 {
-	background: #060;
-}*/

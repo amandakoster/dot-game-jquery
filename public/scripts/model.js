@@ -15,11 +15,16 @@ var gameModel = {
 // $dot.randomize()
 
 // $('#dot').increment();
+function getRandomArbitrary(min, max){
+  return Math.random() * (max - min) + min;
+}
 
 var offset = $dot.offset();
+
 $('#dot').click(function() {
-  console.log('click');
-  $(this).offset({ top: 10, left: 50 });
+  var left = getRandomArbitrary(0, ($(window).width()));
+  console.log(left, 'left');
+  $(this).offset({ top: 0, left: left });
 });
 
 $(function() {

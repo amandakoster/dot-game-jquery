@@ -7,9 +7,22 @@
   width: 50px;
 }
 
-ul {
-	text-decoration: none;
+.button {
+  width: 10px;
+  height: 10px;
+  background: orange;
+
 }
+
+button {
+  top: 20px;
+  left: 20px;
+}
+
+#stop {
+  left: 100px;
+}
+
 
 .slider {
     -webkit-appearance: none;
@@ -62,27 +75,7 @@ button.stop_button {
   background: white;
 }
 
-canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
-}
 
-#jq-animate {
-	background:#98bf21;
-	height:50px;
-	width:50px;
-	position:absolute;
-	z-index:500;
-	right:0px;
-	top:10px;
-}
-
-.square {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  position: relative;
-}
 
 /*#box1, #box2, #box3 {
 	width: 50px;

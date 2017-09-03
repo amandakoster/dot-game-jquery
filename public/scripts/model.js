@@ -15,12 +15,19 @@ var gameModel = {
 // $dot.randomize()
 
 // $('#dot').increment();
+
+function showWidth( ele, w ) {
+  $( '.score' ).text( 'Score: ' + w );
+}
+$( '#dot' ).click(function() {
+  showWidth( '.score', $( '#dot' ).width() );
+});
+
 function getRandomArbitrary(min, max){
   return Math.random() * (max - min) + min;
 }
 
 var offset = $dot.offset();
-
 $('#dot').click(function() {
   var left = getRandomArbitrary(0, ($(window).width()));
   console.log(left, 'left');
@@ -43,6 +50,7 @@ slider.oninput = function() {
   gameModel.velocity = this.value;
 };
 
+// determine window bottom
 var windowBottom = $(window).height();
 console.log(windowBottom);
 var lastFrameTime = null;

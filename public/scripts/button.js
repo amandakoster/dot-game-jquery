@@ -1,5 +1,14 @@
 'use strict';
 
+// $(function() {
+//   $( '#stop' ).click(function() {
+//     $( '#dot-animation' ).addClass( 'pause' );
+//   });
+//   $( '#start' ).click(function() {
+//     $( '#dot-animation' ).removeClass( 'off' );
+//   });
+// });
+
 //toggle button - needs to control animation
 $('.start_button').on('click', function (e) {
   e.preventDefault();
@@ -8,33 +17,14 @@ $('.start_button').on('click', function (e) {
   }).toggleClass('stop_button');
 });
 
-//funtionign start/stop button needs to be 1 button
-$(function() {
-  $( '#stop' ).click(function() {
-    $( '#dot-animation' ).addClass( 'off' );
-  });
-  $( '#start' ).click(function() {
-    $( '#dot-animation' ).removeClass( 'off' );
-  });
-});
+//functioning start/stop button needs to be 1 button
 
-$('#example-two').on('click', function() {
-  var el = $(this);
-  if (el.text() == el.data('text-swap')) {
-    el.text(el.data('text-original'));
-  } else {
-    el.data('text-original', el.text());
-    el.text(el.data('text-swap'));
-  }
-});
-
-// $('#stop').click( function(e){
-//   e.preventDefault();
-//   if ( $(this).hasClass('isDown') ) {
-//     $('#nav').stop().animate({marginTop:'-100px'}, 200);
+// $('#example-two').on('click', function() {
+//   var el = $(this);
+//   if (el.text() == el.data('text-swap')) {
+//     el.text(el.data('text-original'));
 //   } else {
-//     $('#nav').stop().animate({marginTop:'0px'}, 200);
+//     el.data('text-original', el.text());
+//     el.text(el.data('text-swap'));
 //   }
-//   $(this).toggleClass('isDown');
-//   return false;
 // });

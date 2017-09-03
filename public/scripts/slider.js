@@ -8,12 +8,3 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 };
-<<<<<<< HEAD
-=======
-
-$(document).ready(function(){
-  $('button').click(function(){
-    $('div').animate({left: '250px'});
-  });
-});
->>>>>>> 4d6bd4f6d4adef3ac3d4e862a239b67fc96bb718

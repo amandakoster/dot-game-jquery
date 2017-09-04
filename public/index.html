@@ -5,26 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-
+<p class="score"><span><span/></p>
   <div id="slider-container">
-    <input type="range" min="1" max="100" value="10" class="slider" id="slider-range">
-    <p>Value: <span id="slider-value"></span></p>
+    <input type="range" min="1" max="100" class="slider" id="slider-range">
+    <p><span id="slider-value"></span></p>
   </div>
 
 <button id="pause">Pause</button>
 
-<div id="dot">
-hi!
-</div>
-  </div>
-</div>
+<div id="dot"></div>
 
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="scripts/animation.js"></script>
-<script src="scripts/dot-size.js"></script>
-<script src="scripts/slider.js"></script>
-<script src="scripts/button.js"></script>
 <script src="scripts/model.js"></script>
 </html>

@@ -33,37 +33,25 @@
 //     this.y += this.speedY + this.gravitySpeed;
 //   };
 // }
+
+// //
+// function getRandomArbitrary(min, max){
+//   return Math.random() * (max - min) + min;}
 //
-// function updateGameArea() {
-//     myGameArea.clear();
-//     myGamePiece.newPos();
-//     myGamePiece.update();
+// function Dot(height, width){
+//   dotSize= increment();
+//   randomize= getRandomArbitrary(10,100);
+//   this.height= '' + randomize() + 'px';
+//   this.width= '' + randomize() + 'px';
 // }
-// //makes more buttons
-// $(document).ready(function(){
-//   $('.btn2').click(function(){
-//     $('ul').append('<button>new button</button>');
-//   });
-// });
+// onclick(createDot())
 //
-// //
-// // function getRandomArbitrary(min, max){
-// //   return Math.random() * (max - min) + min;}
-// //
-// // function Dot(height, width){
-// //   dotSize= increment();
-// //   randomize= getRandomArbitrary(10,100);
-// //   this.height= '' + randomize() + 'px';
-// //   this.width= '' + randomize() + 'px';
-// // }
-// // onclick(createDot())
-// //
-// // let createDot = function() {
-// //   let dotSize = (Math.ceil((1 / this.state.randomize) * 100));
-// //   let randomize = getRandomArbitrary(10, 100)});
-// //     console.log('dot', 1/this.state.randomize);
-// // }
-//
+// var createDot = function createDot() {
+//   let dotSize = (Math.ceil((1 / this.state.randomize) * 100));
+//   let randomize = getRandomArbitrary(10, 100)});
+//     console.log('dot', 1/this.state.randomize);
+// }
+
 //
 // // var canvas = document.getElementById('canvas');
 // // var ctx = canvas.getContext('2d');

@@ -71,12 +71,15 @@ function animationLoop(timestamp) {
 
   // spawn dots
   if (gameModel.pause === false) {
-
     if (offset.top > windowBottom) {
-      offset.top = 0;
-      offset.left += 50;
+      var left = getRandomArbitrary(0, ($(window).width()));
+      $dot.offset({ top: 0, left: left });
+      var randomNumber = parseInt(getRandomArbitrary(10, 100));
+      $dot.width(randomNumber);
+      $dot.height(randomNumber);
+    } else {
+      $dot.offset(offset);
     }
-    $dot.offset(offset);
   }
 
   window.requestAnimationFrame(animationLoop);

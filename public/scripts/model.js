@@ -2,38 +2,41 @@
 
 var $dot = $('#dot');
 
+function getRandomArbitrary(min, max){
+  return Math.random() * (max - min) + min;
+  console.log(result);
+}
+
 var gameModel = {
   velocity : 10,
   pause : false,
+  dotSize : 0,
 };
 
-// var randomize = function randomize() {
-//   function getRandomArbitrary(min, max){
-//     console.log(randomize);
-// };
-
-// $dot.randomize()
-
-// $('#dot').increment();
-
+//print score or width
 function showWidth( ele, w ) {
-  $( '.score' ).text( 'Score: ' + w );
+  $('.score').text('Score: ' + w);
 }
-$( '#dot' ).click(function() {
-  showWidth( '.score', $( '#dot' ).width() );
+$('#dot').click(function() {
+  showWidth('.score', $('#dot').width());
 });
 
-function getRandomArbitrary(min, max){
-  return Math.random() * (max - min) + min;
-}
+//onclick log a random number
+var randomNumber = Math.random() * (100 - 10) + 10;
+console.log(randomNumber);
 
+//get window width for left offset
 var offset = $dot.offset();
 $('#dot').click(function() {
   var left = getRandomArbitrary(0, ($(window).width()));
-  console.log(left, 'left');
   $(this).offset({ top: 0, left: left });
+  var randomNumber = parseInt(getRandomArbitrary(10, 100));
+  $(this).width(randomNumber);
+  $(this).height(randomNumber);
+  console.log(randomNumber);
 });
 
+//click to pause
 $(function() {
   $('#pause').click(function() {
     gameModel.pause = !gameModel.pause;
@@ -41,6 +44,7 @@ $(function() {
   });
 });
 
+//slider to control velocity
 var slider = document.getElementById('slider-range');
 var output = document.getElementById('slider-value');
 output.innerHTML = slider.value;
@@ -50,7 +54,7 @@ slider.oninput = function() {
   gameModel.velocity = this.value;
 };
 
-// determine window bottom
+// determine window bottom for animation
 var windowBottom = $(window).height();
 console.log(windowBottom);
 var lastFrameTime = null;
@@ -67,7 +71,7 @@ function animationLoop(timestamp) {
   var offset = $dot.offset();
   offset.top += (gameModel.velocity / 100) * frameTime;
 
-  // spawn
+  // spawn dots
   if (gameModel.pause === false) {
 
     if (offset.top > windowBottom) {

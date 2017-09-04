@@ -25,8 +25,6 @@ $('#dot').click(function() {
   console.log(score);
 });
 
-  // output.innerHTML = this.value;
-
 // determine window width for hz offset
 var offset = $dot.offset();
 $('#dot').click(function() {
@@ -69,11 +67,11 @@ function animationLoop(timestamp) {
   var offset = $dot.offset();
   offset.top += (gameModel.velocity / 100) * frameTime;
 
-  // spawn dots
+  // spawn dots + offset
   if (gameModel.pause === false) {
     if (offset.top > windowBottom) {
       var left = getRandomArbitrary(0, ($(window).width()));
-      $dot.offset({ top: 0, left: left });
+      $dot.offset({top: 0, left: left});
       var randomNumber = parseInt(getRandomArbitrary(10, 100));
       $dot.width(randomNumber);
       $dot.height(randomNumber);

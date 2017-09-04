@@ -15,10 +15,6 @@ button {
   left: 20px;
 }
 
-#stop {
-  left: 100px;
-}
-
 .slider {
     -webkit-appearance: none;
     width: 50%;
@@ -35,7 +31,7 @@ button {
     opacity: 1;
 }
 
-button.stop_button {
+/*button.stop_button {
     width: 5em;
     height: 3em;
 		margin: 1em;
@@ -51,4 +47,4 @@ button.stop_button {
 		border: solid green;
     background: white;
     color: green;
-}
+}*/

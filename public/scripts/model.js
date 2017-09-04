@@ -18,7 +18,7 @@ function showWidth( ele, w ) {
   $('.score').text('Score: ' + w);
 }
 $('#dot').click(function() {
-  showWidth('.score', $('#dot').width());
+  showWidth('.score', Math.ceil(1 / $('#dot').width() * 1000));
 });
 
 //onclick log a random number

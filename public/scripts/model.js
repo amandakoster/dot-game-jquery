@@ -11,21 +11,23 @@ var gameModel = {
   velocity : 10,
   pause : false,
   dotSize : 0,
+  score : 0,
 };
 
-//print score or width
-function showWidth( ele, w ) {
+// print inverse dot width as score
+function printScore(ele, w) {
   $('.score').text('Score: ' + w);
-}
+};
 $('#dot').click(function() {
-  showWidth('.score', Math.ceil(1 / $('#dot').width() * 1000));
+  var score = Math.ceil(1 / $('#dot').width() * 1000);
+  gameModel.score = gameModel.score + score;
+  printScore('.score', gameModel.score);
+  console.log(score);
 });
 
-//onclick log a random number
-var randomNumber = Math.random() * (100 - 10) + 10;
-console.log(randomNumber);
+  // output.innerHTML = this.value;
 
-//get window width for left offset
+// determine window width for hz offset
 var offset = $dot.offset();
 $('#dot').click(function() {
   var left = getRandomArbitrary(0, ($(window).width()));
@@ -33,10 +35,9 @@ $('#dot').click(function() {
   var randomNumber = parseInt(getRandomArbitrary(10, 100));
   $(this).width(randomNumber);
   $(this).height(randomNumber);
-  console.log(randomNumber);
 });
 
-//click to pause
+// click to pause
 $(function() {
   $('#pause').click(function() {
     gameModel.pause = !gameModel.pause;
@@ -44,13 +45,10 @@ $(function() {
   });
 });
 
-//slider to control velocity
+// slider to control velocity
 var slider = document.getElementById('slider-range');
 var output = document.getElementById('slider-value');
-output.innerHTML = slider.value;
-
 slider.oninput = function() {
-  output.innerHTML = this.value;
   gameModel.velocity = this.value;
 };
 

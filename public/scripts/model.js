@@ -1,12 +1,13 @@
 'use strict';
 
+// globals
 var $dot = $('#dot');
 
 function getRandomArbitrary(min, max){
   return Math.random() * (max - min) + min;
-  console.log(result);
 }
 
+// model
 var gameModel = {
   velocity : 10,
   pause : false,
@@ -19,7 +20,7 @@ function printScore(ele, w) {
   $('.score').text('Score: ' + w);
 };
 $('#dot').click(function() {
-  var score = Math.ceil(1 / $('#dot').width() * 1000);
+  var score = Math.ceil(1 / $('#dot').width() * 100);
   gameModel.score = gameModel.score + score;
   printScore('.score', gameModel.score);
   console.log(score);

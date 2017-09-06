@@ -1,4 +1,8 @@
 
+body {
+  padding: 5%;
+}
+
 #dot {
   border: 3px solid red;
   background-color: red;

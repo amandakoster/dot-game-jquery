@@ -34,21 +34,3 @@ button {
 .slider:hover {
     opacity: 1;
 }
-
-/*button.stop_button {
-    width: 5em;
-    height: 3em;
-		margin: 1em;
-    border: solid red;
-		background: white;
-		color: red;
-}
-
-.start_button {
-    width: 5em;
-    height: 3em;
-		margin: 1em;
-		border: solid green;
-    background: white;
-    color: green;
-}*/

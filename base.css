@@ -41,16 +41,16 @@
 button {
   height: 30px;
   width: 80px;
-  border: 1px solid green;
-  background-color: green;
+  border: 1px solid #32CD32;
+  background-color: #32CD32;
   color: white;
   outline: 0;
   cursor: pointer;
 }
 
 .red {
-  border: 1px solid red;
-  background-color: red;
+  border: 1px solid #F9341E;
+  background-color: #F9341E;
   color: white;
   outline: 0;
   cursor: pointer;

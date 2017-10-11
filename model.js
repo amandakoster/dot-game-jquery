@@ -22,9 +22,10 @@ var gameModel = {
 };
 
 // print inverse dot width as score
-function printScore(ele, width) {
+function printScore(el, width) {
   $('.score').text('Score: ' + width);
 };
+
 $('.dot').click(function() {
   var score = Math.ceil(1 / $('.dot').width() * 100);
   gameModel.score = gameModel.score + score;
@@ -32,24 +33,9 @@ $('.dot').click(function() {
   console.log(score);
 });
 
-// create raondom dots
-function createDot(x, y) {
-  var elem = document.createElement('div');
-  elem.setAttribute('class', 'dot');
-  elem.setAttribute('style', 'left:' + x + 'px;top:' + y + 'px;');
-  document.getElementsByTagName('body')[0].appendChild(elem);
-  return elem;
-}
-function anotherDot() {
-  createDot(Math.floor(Math.random() * 200), Math.floor(Math.random() * 200));
-}
-for(var i = 0;i < 10;i++) {
-  anotherDot();
-}
-
 // determine window width for hz offset
 var offset = $dot.offset();
-$('#dot').click(function() {
+$('.dot').click(function() {
   var left = getRandomArbitrary(0, ($(window).width()));
   $(this).offset({ top: 0, left: left });
   var randomNumber = parseInt(getRandomArbitrary(10, 100));
@@ -75,8 +61,10 @@ slider.oninput = function() {
 
 // determine window bottom for animation
 var windowBottom = $(window).height();
-console.log(windowBottom);
+console.log(windowBottom, 'window bottom');
 var lastFrameTime = null;
+
+//start animation loop
 function animationLoop(timestamp) {
   if (lastFrameTime == null) {
     lastFrameTime = timestamp;
@@ -90,8 +78,11 @@ function animationLoop(timestamp) {
   var offset = $dot.offset();
   offset.top += (gameModel.velocity / 100) * frameTime;
 
+  //forEach calcuate 4 random offsets
+
   // spawn dots + offset
   if (gameModel.pause === false) {
+    //randomizes offset
     if (offset.top > windowBottom) {
       var left = getRandomArbitrary(0, ($(window).width()));
       $dot.offset({top: 0, left: left});
@@ -101,9 +92,11 @@ function animationLoop(timestamp) {
     } else {
       $dot.offset(offset);
     }
+    // anotherDot();
   }
 
   window.requestAnimationFrame(animationLoop);
 }
+//end animation loop
 
 window.requestAnimationFrame(animationLoop);

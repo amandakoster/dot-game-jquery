@@ -11,7 +11,7 @@
 .how-to {
   width: 100%;
   height: 25%;
-  border: 1px solid pink;
+  border: 1px solid #b6fff4;
   padding: 1%;
 }
 
@@ -22,6 +22,7 @@
 #close {
     float:right;
     display:inline-block;
+    cursor: pointer;
     color: #d3d3d3;
 }
 

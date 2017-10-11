@@ -1,4 +1,4 @@
-callbacks# Dot Game
+# Dot Game
 In this game, a dot moves from the top to the bottom of the screen. A player tries to click on the dot and receives points when they are successful.
 
 ## Play the Game!

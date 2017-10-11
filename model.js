@@ -3,6 +3,12 @@
 // globals
 var $dot = $('#dot');
 
+$(function(){
+  $('.how-to').click(function() {
+    $(this).remove();
+  });
+});
+
 function getRandomArbitrary(min, max){
   return Math.random() * (max - min) + min;
 }

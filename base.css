@@ -27,7 +27,7 @@
     color: #d3d3d3;
 }
 
-.dot {
+/*.dot {
   background-color: red;
   position: absolute
   top: 0;
@@ -35,13 +35,15 @@
   width: 100px;
   height: 100px;
   border-radius: 50%
-}
+}*/
 
 .dot {
+    background: black;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 20px;
     height: 20px;
-    background: black;
     border-radius: 50%;
 }
 

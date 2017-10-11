@@ -45,6 +45,7 @@ $('#dot').click(function() {
 // click to pause
 $(function() {
   $('#pause').click(function() {
+    $(this).toggleClass('red');
     gameModel.pause = !gameModel.pause;
     $(this).text(gameModel.pause ? 'Start' : 'Pause');
   });

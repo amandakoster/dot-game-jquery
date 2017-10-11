@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Dot Game</title>
+<link rel="stylesheet" href="base.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="how-to"><span id="close">x</span>In this game, a dot moves from the top to the bottom of the screen. The slider controls the rate at which the dot falls, with a range of 10-100 pixels per second. Try to click on the dot and receive points!
+</div>
+  <p class="score"><span><span/></p>
+  <div id="slider-container">
+    <input type="range" min="1" max="100" class="slider" id="slider-range">
+    <p><span id="slider-value"></span></p>
+  </div>
+
+<button id="pause">Pause</button>
+<div id="dot"></div>
+</body>
+
+<script src="model.js"></script>
+</html>

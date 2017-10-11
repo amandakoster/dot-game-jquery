@@ -1,7 +1,7 @@
 'use strict';
 
 // globals
-var $dot = $('#dot');
+var $dot = $('.dot');
 
 $(function(){
   $('.how-to').click(function() {
@@ -22,15 +22,30 @@ var gameModel = {
 };
 
 // print inverse dot width as score
-function printScore(ele, w) {
-  $('.score').text('Score: ' + w);
+function printScore(ele, width) {
+  $('.score').text('Score: ' + width);
 };
-$('#dot').click(function() {
-  var score = Math.ceil(1 / $('#dot').width() * 100);
+$('.dot').click(function() {
+  var score = Math.ceil(1 / $('.dot').width() * 100);
   gameModel.score = gameModel.score + score;
   printScore('.score', gameModel.score);
   console.log(score);
 });
+
+// create raondom dots
+function createDot(x, y) {
+  var elem = document.createElement('div');
+  elem.setAttribute('class', 'dot');
+  elem.setAttribute('style', 'left:' + x + 'px;top:' + y + 'px;');
+  document.getElementsByTagName('body')[0].appendChild(elem);
+  return elem;
+}
+function anotherDot() {
+  createDot(Math.floor(Math.random() * 200), Math.floor(Math.random() * 200));
+}
+for(var i = 0;i < 10;i++) {
+  anotherDot();
+}
 
 // determine window width for hz offset
 var offset = $dot.offset();

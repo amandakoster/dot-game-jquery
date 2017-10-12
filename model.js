@@ -85,6 +85,7 @@ function animationLoop(timestamp) {
     //randomizes offset
     if (offset.top > windowBottom) {
       var left = getRandomArbitrary(0, ($(window).width()));
+      // var top = getRandomArbitrary(0, ($(window).height()));
       $dot.offset({top: 0, left: left});
       var randomNumber = parseInt(getRandomArbitrary(10, 100));
       $dot.width(randomNumber);
